@@ -20,7 +20,7 @@ public class RadioButtonTest {
         System.out.println("blueRadioBtn.isSelected() = " + blueRadioBtn.isSelected());
         System.out.println("redRadioBtn.isSelected() = " + redRadioBtn.isSelected());
 
-        Thread.sleep(3000);
+
         driver.quit();
     }
 }
