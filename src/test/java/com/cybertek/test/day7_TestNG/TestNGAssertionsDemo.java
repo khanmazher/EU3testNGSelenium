@@ -14,7 +14,7 @@ public class TestNGAssertionsDemo {
     @Test
     public void test1(){
         System.out.println("First Assertion");
-        Assert.assertEquals("title", "tiTle");
+        Assert.assertEquals("title", "title");
 
         System.out.println("Second Assertion");
         Assert.assertEquals("url", "url");
@@ -25,6 +25,14 @@ public class TestNGAssertionsDemo {
         Assert.assertEquals("test2", "test2");
 
     }
+
+    @Test
+    public void test3(){
+        String expectedtitle = "Cyb";
+        String actualTitle = "Cybertek";
+        Assert.assertTrue(actualTitle.startsWith(expectedtitle));
+    }
+
 
 
     @AfterMethod

@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class CheckboxDemo {
 
     @Test
-    public void test1(){
+    public void test1() throws InterruptedException {
 
         WebDriver driver = WebDriverFactory.getDriver("Chrome");
         driver.get("http://practice.cybertekschool.com/checkboxes");

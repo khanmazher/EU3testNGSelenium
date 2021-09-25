@@ -4,6 +4,7 @@ import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class RadioButtonTest {
@@ -19,6 +20,12 @@ public class RadioButtonTest {
 
         System.out.println("blueRadioBtn.isSelected() = " + blueRadioBtn.isSelected());
         System.out.println("redRadioBtn.isSelected() = " + redRadioBtn.isSelected());
+
+        redRadioBtn.click();
+
+        Assert.assertTrue(blueRadioBtn.isSelected(), "Blue radio button is selected");
+        Assert.assertFalse(redRadioBtn.isSelected(),"Red radio button is not selected");
+
 
 
         driver.quit();
