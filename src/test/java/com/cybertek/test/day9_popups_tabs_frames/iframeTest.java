@@ -77,7 +77,7 @@ public class iframeTest {
 
         System.out.println(driver.findElement(By.tagName("body")).getText());
 
-        //to swtich to bottom - go to main html
+        //to swtich to bottom - go to main html. cannot swith from parent to grandchild.
         driver.switchTo().frame(1);
         System.out.println(driver.findElement(By.tagName("body")).getText());
 
