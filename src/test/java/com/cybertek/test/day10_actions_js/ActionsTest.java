@@ -41,7 +41,20 @@ public class ActionsTest {
         WebElement viewLink = driver.findElement(By.linkText("View profile"));
 
         Assert.assertTrue(viewLink.isDisplayed(), "verify view link is displayed");
+    }
 
+    @Test
+    public void dragAndDrop() throws InterruptedException {
+        driver.get("http://demos.telerik.com/kendo-ui/dragdrop/index");
+        driver.manage().window().maximize();
+        Actions actions = new Actions(driver);
 
+        WebElement source = driver.findElement(By.id("draggable"));
+        WebElement target = driver.findElement(By.id("droptarget"));
+
+        driver.findElement(By.xpath("//*[.='Accept Cookies']")).click();
+        Thread.sleep(2000);
+
+        actions.dragAndDrop(source,target).perform();
     }
 }
