@@ -3,11 +3,13 @@ package com.cybertek.test.day12_properties_driver_test;
 import com.cybertek.utilities.ConfigurationReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 
 
 public class LoginTest {
+WebDriver driver;
 
     @Test
     public void test1(){

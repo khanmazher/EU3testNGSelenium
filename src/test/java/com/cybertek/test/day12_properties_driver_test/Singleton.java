@@ -2,9 +2,14 @@ package com.cybertek.test.day12_properties_driver_test;
 
 public class Singleton {
 
-    private Singleton(){
+    public static Object get;
 
-        private static String str;
+    public static String getInstance() {
+    }
+
+    private String Singleton(){
+
+        String str;
 
         public static String getInstance(){
             if(str==null){
