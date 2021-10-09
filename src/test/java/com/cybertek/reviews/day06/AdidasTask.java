@@ -16,6 +16,8 @@ public class AdidasTask {
     WebDriver driver;
     WebDriverWait wait;
 
+    int expectedPurchaseAmount;
+
     @BeforeMethod
     public void setUp(){
         driver = WebDriverFactory.getDriver("chrome");
@@ -32,7 +34,15 @@ public class AdidasTask {
     @Test
     public void purchaseTest() throws InterruptedException {
 
-        productAdder("Laptop", "Sony vaio i5");
+        String[][] purchaseInfo = new String[][]{{"Laptops","Sony vaio i5"},{"Laptops","Dell i7 8gb"}};
+        for (String[] strings : purchaseInfo){
+            productAdder(strings[0],strings[1]);
+        }
+
+        String[] unwantedProductsInfo = {"Dell i7 8gb"};
+        for (String s : unwantedProductsInfo){
+            expectedPurchaseAmount-=productRemover(s);
+        }
 
     }
 
